@@ -1,0 +1,17 @@
+[build-system]
+# Specify the required build system.
+# Setuptools 40.9.0+ requirement is necessary to get rid of setup.py; see
+#  https://github.com/pypa/setuptools/pull/1675
+requires = ["setuptools >= 40.9.0", "wheel >= 0.36.2"]
+build-backend = "setuptools.build_meta"
+
+[tool.bork]
+project_name = "wfraven"
+
+[tool.bork.release]
+pypi = false
+
+[tool.bork.zipapp]
+enabled = true
+main = "wfraven.cli:main"
+
